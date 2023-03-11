@@ -1,10 +1,7 @@
-from conversion_table import HEX_BINARY_EQUIVALENCE
+from .conversion_table import BIN_TO_HEX
 
 
 class Binary():
-    """_Class to convert binary numbers to decimal and hexadecimal numbers_
-    """
-
     def __init__(self, binary_str: str) -> None:
         """Receives a string of 0's and 1's representing a binary number and converts it to
         decimal and hexadecimal values by calling the methods binary_to_decimal 
@@ -21,12 +18,12 @@ class Binary():
         """
         self.binary_str = binary_str
         self.number_of_bits = len(self.binary_str)
-        self.input_is_valid(binary_str)
+        self.validate_input(binary_str)
         self.preprocess()
         self.binary_to_decimal()
         self.binary_to_hex()
 
-    def input_is_valid(self, binary_str: str) -> None:
+    def validate_input(self, binary_str: str) -> None:
         """_Method to check if the input string is a binary number_
 
         Args:
@@ -70,7 +67,7 @@ class Binary():
         group_of_four_bits = [self.binary_str[i:i+4]
                               for i in range(0, self.number_of_bits, 4)]
         
-        hex_list = [HEX_BINARY_EQUIVALENCE[group]
+        hex_list = [BIN_TO_HEX[group]
                     for group in group_of_four_bits]
         
         self.hexadecimal = ''.join(hex_list)
