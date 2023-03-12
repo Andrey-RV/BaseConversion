@@ -2,7 +2,7 @@ from .conversion_table import BIN_TO_HEX
 
 
 class Binary():
-    def __init__(self, binary_str: str) -> None:
+    def __init__(self, binary_input: str | int) -> None:
         """Receives a string of 0's and 1's representing a binary number and converts it to
         decimal and hexadecimal values by calling the methods binary_to_decimal
         and binary_to_hex in the constructor_
@@ -16,9 +16,9 @@ class Binary():
             decimal (str): _The decimal value of the binary number_
             hexadecimal (str): _The hexadecimal value of the binary number_
         """
-        self.binary_str = binary_str
+        self.binary_str = str(binary_input)
         self.number_of_bits = len(self.binary_str)
-        self.validate_input(binary_str)
+        self.validate_input(self.binary_str)
         self.preprocess()
         self.binary_to_decimal()
         self.binary_to_hex()
