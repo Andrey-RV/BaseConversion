@@ -43,6 +43,8 @@ class Binary():
     def preprocess(self) -> None:
         """_Method to add zeros to the left of the binary number to make it divisible by 4_
         """
+        if self.number_of_bits % 4 == 0:
+            return
         quantity_of_zeros_to_fill = 4 - (self.number_of_bits % 4)
         self.binary_str = '0' * quantity_of_zeros_to_fill + self.binary_str
 
