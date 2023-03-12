@@ -3,12 +3,12 @@ from .conversion_table import BIN_TO_HEX
 
 class Binary():
     def __init__(self, binary_input: str | int) -> None:
-        """Receives a string of 0's and 1's representing a binary number and converts it to
-        decimal and hexadecimal values by calling the methods binary_to_decimal
-        and binary_to_hex in the constructor_
+        """Receives a string of 0's and 1's or an int value representing a binary number
+        and converts it to decimal and hexadecimal values by calling the methods
+        binary_to_decimal and binary_to_hex in the constructor_
 
         Args:
-            binary_value (str): _A string of 0's and 1's representing a binary number_
+            binary_input (str | int): _A string of 0's and 1's or an int value representing a binary number_
 
         Attributes:
             binary_str (str): _A string of 0's and 1's representing a binary number_
@@ -41,8 +41,7 @@ class Binary():
             raise ValueError("Empty string or string with only spaces is not a binary number")
 
     def preprocess(self) -> None:
-        """_Method to add zeros to the left of the binary number to make it divisible by 4_
-        """
+        """_Method to add zeros to the left of the binary number to make it divisible by 4_"""
         if self.number_of_bits % 4 == 0:
             return
         quantity_of_zeros_to_fill = 4 - (self.number_of_bits % 4)
