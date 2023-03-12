@@ -73,7 +73,7 @@ class Hexadecimal():
 
         hex_list.reverse()
         return hex_list
-    
+
     def to_decimal(self) -> str:
         """_Method to return the decimal value of the hexadecimal number_
 
