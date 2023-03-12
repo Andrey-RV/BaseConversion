@@ -4,7 +4,7 @@ from .conversion_table import BIN_TO_HEX
 class Binary():
     def __init__(self, binary_str: str) -> None:
         """Receives a string of 0's and 1's representing a binary number and converts it to
-        decimal and hexadecimal values by calling the methods binary_to_decimal 
+        decimal and hexadecimal values by calling the methods binary_to_decimal
         and binary_to_hex in the constructor_
 
         Args:
@@ -38,8 +38,7 @@ class Binary():
             raise ValueError(f"{binary_str} is not a binary number")
 
         if self.binary_str.isspace() or self.binary_str == '':
-            raise ValueError(
-                f"Empty string or string with only spaces is not a binary number")
+            raise ValueError("Empty string or string with only spaces is not a binary number")
 
     def preprocess(self) -> None:
         """_Method to add zeros to the left of the binary number to make it divisible by 4_
@@ -66,7 +65,7 @@ class Binary():
         """
         group_of_four_bits = [self.binary_str[i:i+4]
                               for i in range(0, self.number_of_bits, 4)]
-        
+
         hex_list = [BIN_TO_HEX[group]
                     for group in group_of_four_bits]
         

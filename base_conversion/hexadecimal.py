@@ -4,7 +4,7 @@ from .conversion_table import HEX_TO_BIN
 class Hexadecimal():
     def __init__(self, hex_str: str) -> None:
         """Receives a string representing a hexadecimal number and converts it to
-        decimal and binary values by calling the methods hex_to_decimal 
+        decimal and binary values by calling the methods hex_to_decimal
         and hex_to_binary in the constructor_
 
         Args:
@@ -35,9 +35,8 @@ class Hexadecimal():
             raise ValueError(f"{hex_str} is not a hexadecimal number")
 
         if self.hex_str.isspace() or self.hex_str == '':
-            raise ValueError(
-                f"Empty string or string with only spaces is not a hexadecimal number")
-        
+            raise ValueError("Empty string or string with only spaces is not a hexadecimal number")
+
     def hex_to_binary(self) -> None:
         """_Method to convert a hexadecimal number to a binary number_
         """
