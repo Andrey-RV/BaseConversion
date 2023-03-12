@@ -68,7 +68,7 @@ class Binary():
 
         hex_list = [BIN_TO_HEX[group]
                     for group in group_of_four_bits]
-        
+
         self.hexadecimal = ''.join(hex_list)
 
     def to_decimal(self) -> str:

@@ -53,7 +53,7 @@ class Hexadecimal():
         for digit in hex_no_letters_reversed:
             partial_decimal_value += digit * 16 ** power
             power += 1
-    
+
         self.decimal = str(partial_decimal_value)
 
     def preprocess(self) -> list[int]:
