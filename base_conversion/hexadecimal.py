@@ -81,7 +81,7 @@ class Hexadecimal():
             str: _The decimal value of the hexadecimal number_
         """
         return self.decimal
-    
+
     def to_binary(self) -> str:
         """_Method to return the binary value of the hexadecimal number_
 
