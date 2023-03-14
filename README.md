@@ -1,5 +1,5 @@
-# Base Converstion
-This is a package made as a learning project containing classes and methods to convert a value between binary, decimal and hexadecimal without using the standart conversion using the int() class.
+# Base Conversion
+This is a package made as a learning project containing classes and methods to convert a value between binary, decimal and hexadecimal without using the standard conversion using the int() class.
 
 ## Requirements
 To run the program, you'll need Python 3.9 or above to avoid any errors related to Type Hints from PEP 585. To start, download or clone the repository, and navigate to the project directory
@@ -9,16 +9,16 @@ cd BaseConversion
 ```
 
 ## How to use
-In a new empty .py file, import the binary, decimal and hexadecimal modules
+In a new empty .py file, import the Binary, Decimal and Hexadecimal classes
 
 ```
-from base_conversion import binary, decimal, hexadecimal
+from base_conversion import Binary, Decimal, Hexadecimal
 ```
 
 ### Converting from binary
-Instatiate a Binary object passing either a str or an int representation of a binary number
+Instantiate a Binary object passing either a str or an int representation of a binary number
 ```
-binary_number = binary.Binary(101101)
+binary_number = Binary(101101)
 ```
 
 The decimal and hexadecimal values are returned from the methods to_decimal() and to_hexadecimal()
@@ -31,9 +31,9 @@ hex_value = binary_number.to_hexadecimal()
 ```
 
 ### Converting from decimal
-Instatiate a Decimal object passing either a str or an int representation of a decimal number
+Instantiate a Decimal object passing either a str or an int representation of a decimal number
 ```
-decimal_number = binary.Decimal('45')
+decimal_number = Decimal('45')
 ```
 
 The binary and hexadecimal values are returned from the methods to_binary() and to_hexadecimal()
@@ -46,9 +46,9 @@ hex_value = decimal_number.to_hexadecimal()
 ```
 
 ### Converting from hexadecimal
-Instatiate a Hexadecimal object passing a str representation of a hexadecimal number
+Instantiate a Hexadecimal object passing a str representation of a hexadecimal number
 ```
-hex_number = binary.Binary('2D')
+hex_number = Hexadecimal('2D')
 ```
 
 The binary and decimal values are returned from the methods to_binary() and to_decimal()
